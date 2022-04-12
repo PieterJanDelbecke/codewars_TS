@@ -1,9 +1,37 @@
 "use strict";
-function abbrevName(name) {
-    let letters = [];
-    name.split(" ").forEach((word) => {
-        letters.push(word.charAt(0).toUpperCase());
+function countSheep(arrayofSheep) {
+    let count = 0;
+    arrayofSheep.forEach((value) => {
+        if (value) {
+            count++;
+        }
     });
-    return letters.join('.');
+    return count;
 }
-console.log(abbrevName('Sam Harris'));
+let array1 = [
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+];
+console.log(countSheep(array1));

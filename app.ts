@@ -1,9 +1,38 @@
-function abbrevName(name:string):string{
-    let letters:string[] = []
-    name.split(" ").forEach((word)=>{
-        letters.push(word.charAt(0).toUpperCase())
-    })
-    return letters.join('.')
+function countSheep(arrayofSheep: (boolean | undefined | null)[]): number {
+  let count: number = 0;
+  arrayofSheep.forEach((value) => {
+    if (value) {
+      count++;
+    }
+  });
+  return count;
 }
 
-console.log(abbrevName('Sam Harris'))
+let array1 = [
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+];
+
+console.log(countSheep(array1));
