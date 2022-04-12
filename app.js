@@ -1,5 +1,10 @@
 "use strict";
-function smash(words) {
-    return words.join(" ");
+function repeatStr(n, s) {
+    let str = [];
+    for (let i = 0; i < n; i++) {
+        str.push(s);
+    }
+    return str.join("");
 }
-console.log(smash(["hello", "world", "this", "is", "great"]));
+console.log(repeatStr(6, "I"));
+console.log(repeatStr(5, "Hello"));
