@@ -1,5 +1,5 @@
 "use strict";
-function hoopCount(n) {
-    return n >= 10 ? "Keep at  it until you get it" : "Great, now move on to tricks";
+function cockroachSpeed(s) {
+    return Math.floor((s * 100000) / 3600);
 }
-console.log(hoopCount(5));
+console.log(cockroachSpeed(1.08));
