@@ -1,6 +1,4 @@
-function litres(time:number):number{
-    return Math.floor(time*0.5)
+function smash(words: string[]):string{
+    return words.join(" ")
 }
-console.log(litres(2))
-console.log(litres(1.4))
-console.log(litres(12.3))
+console.log(smash(["hello", "world", "this", "is", "great"]))
