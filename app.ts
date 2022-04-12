@@ -1,7 +1,6 @@
-function findAverage(array: number[]):number{
-    return (array.length !== 0)?(array.reduce((currTotal, currValue)=> currTotal + currValue))/array.length : 0
+function litres(time:number):number{
+    return Math.floor(time*0.5)
 }
-
-console.log(findAverage([1,1,1]))
-console.log(findAverage([10,20,30]))
-console.log(findAverage([]))
+console.log(litres(2))
+console.log(litres(1.4))
+console.log(litres(12.3))
