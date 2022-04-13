@@ -1,8 +1,16 @@
-function squareDigits(num:number){
-    let arr:number[] = num.toString().split("").map((e)=>{
-        return Math.pow(+e,2) 
-    })
-    return +arr.join('')
+function countSheep(num:number):string{
+    let arr:string[]=[]
+    if (num===0){
+        return ''
+    } else {
+        for (let i = 1; i <= num; i++){
+            arr.push(i + " sheep...")
+        }
+        return arr.join("")
+    }
 }
 
-console.log(squareDigits(9119))
+console.log(countSheep(0))
+console.log(countSheep(1))
+console.log(countSheep(2))
+console.log(countSheep(3))
