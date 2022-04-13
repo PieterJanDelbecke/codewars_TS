@@ -1,16 +1,13 @@
-function countSheep(num:number):string{
-    let arr:string[]=[]
-    if (num===0){
-        return ''
-    } else {
-        for (let i = 1; i <= num; i++){
-            arr.push(i + " sheep...")
+function divisors(n: number){
+    let arr:number[]=[]
+    for (let i= 1; i <=n; i++){
+        if (n%i===0){
+            arr.push(i)
         }
-        return arr.join("")
     }
+    return arr.length
 }
 
-console.log(countSheep(0))
-console.log(countSheep(1))
-console.log(countSheep(2))
-console.log(countSheep(3))
+console.log(divisors(1))
+console.log(divisors(10))
+console.log(divisors(11))
