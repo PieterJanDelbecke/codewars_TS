@@ -1,5 +1,11 @@
-function stringToNumber(str:string):number{
-    return +str
+class Department {
+    name:string;
+
+    constructor(n: string){
+        this.name = n;
+    }
 }
 
-console.log(stringToNumber("1234"))
+const accounting = new Department('Accounting')
+
+console.log(accounting)

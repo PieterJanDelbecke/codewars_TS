@@ -1,5 +1,8 @@
 "use strict";
-function stringToNumber(str) {
-    return +str;
+class Department {
+    constructor(n) {
+        this.name = n;
+    }
 }
-console.log(stringToNumber("1234"));
+const accounting = new Department('Accounting');
+console.log(accounting);
