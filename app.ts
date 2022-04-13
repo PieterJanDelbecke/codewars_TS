@@ -1,10 +1,8 @@
-function summation(num:number):number{
-    let total:number=0
-    for (let i = 1; i <= num; i++){
-        total += i
-    }
-    return total
+function squareDigits(num:number){
+    let arr:number[] = num.toString().split("").map((e)=>{
+        return Math.pow(+e,2) 
+    })
+    return +arr.join('')
 }
 
-console.log(summation(1))
-console.log(summation(8))
+console.log(squareDigits(9119))

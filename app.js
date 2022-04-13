@@ -1,10 +1,8 @@
 "use strict";
-function summation(num) {
-    let total = 0;
-    for (let i = 1; i <= num; i++) {
-        total += i;
-    }
-    return total;
+function squareDigits(num) {
+    let arr = num.toString().split("").map((e) => {
+        return Math.pow(+e, 2);
+    });
+    return +arr.join('');
 }
-console.log(summation(1));
-console.log(summation(8));
+console.log(squareDigits(9119));
