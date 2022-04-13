@@ -1,7 +1,8 @@
-function getCount(str: string): number {
-  const regex = /[aeiou]/g;
-  const found = str.match(regex);
-  return found ? found.length : 0;
+function findDifference(a: number[], b:number[]):number{
+    let dimA = a.reduce((a,b)=> a*b)
+    let dimB = b.reduce((a,b)=> a*b)
+    return dimA > dimB ? dimA - dimB : dimB - dimA
 }
 
-console.log(getCount("abracadabra"));
+
+console.log(findDifference([3,2,5],[1,4,4]))
