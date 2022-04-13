@@ -1,8 +1,10 @@
-function findDifference(a: number[], b:number[]):number{
-    let dimA = a.reduce((a,b)=> a*b)
-    let dimB = b.reduce((a,b)=> a*b)
-    return dimA > dimB ? dimA - dimB : dimB - dimA
+function summation(num:number):number{
+    let total:number=0
+    for (let i = 1; i <= num; i++){
+        total += i
+    }
+    return total
 }
 
-
-console.log(findDifference([3,2,5],[1,4,4]))
+console.log(summation(1))
+console.log(summation(8))
