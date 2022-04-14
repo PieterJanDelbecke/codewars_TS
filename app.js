@@ -1,8 +1,9 @@
 "use strict";
-function twoSort(s) {
-    return s
-        .sort()[0]
-        .split("")
-        .join("***");
+function descendingOrder(n) {
+    let arr = [];
+    n.toString().split("").forEach(num => {
+        arr.push(+num);
+    });
+    return +arr.sort((a, b) => b - a).join("");
 }
-console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+console.log(descendingOrder(1234567));
