@@ -1,28 +1,8 @@
-class Department {
-    private name:string;
-    private employees: string[] = [];
-
-    constructor(n: string){
-        this.name = n;
-    }
-
-    describe(this:Department){
-        console.log('Department: ' + this.name)
-    }
-
-    addEmployee(employee:string){
-        this.employees.push(employee)
-    }
-
-    printEmployeeInformation(){
-        console.log(this.employees.length)
-        console.log(this.employees)
-    }
+function twoSort(s:string[]){
+    return s
+    .sort()[0]
+    .split("")
+    .join("***")
 }
 
-const accounting = new Department('Accounting')
-
-accounting.addEmployee('Max');
-accounting.addEmployee('Pieter');
-
-accounting.printEmployeeInformation()
+console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))

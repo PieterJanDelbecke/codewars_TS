@@ -1,21 +1,8 @@
 "use strict";
-class Department {
-    constructor(n) {
-        this.employees = [];
-        this.name = n;
-    }
-    describe() {
-        console.log('Department: ' + this.name);
-    }
-    addEmployee(employee) {
-        this.employees.push(employee);
-    }
-    printEmployeeInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
-    }
+function twoSort(s) {
+    return s
+        .sort()[0]
+        .split("")
+        .join("***");
 }
-const accounting = new Department('Accounting');
-accounting.addEmployee('Max');
-accounting.addEmployee('Pieter');
-accounting.printEmployeeInformation();
+console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
