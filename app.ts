@@ -33,8 +33,25 @@ class Department {
   }
   
   class AccountingDepartment extends Department {
+    private lastReport: string;
+
+    get mostRecentReport(){
+        if (this.lastReport){
+            return this.lastReport;
+        }
+        throw new Error('No report found')
+    }
+
+    set mostRecentReport(value: string){
+        if (!value){
+            throw new Error('Please pass in a valid value')
+        }
+        this.addReport(value)
+    }
+
     constructor(id: string, private reports: string[]) {
       super(id, 'Accounting');
+      this.lastReport = reports[0]
     }
   
     addEmployee(name: string) {
@@ -46,6 +63,7 @@ class Department {
 
     addReport(text: string) {
       this.reports.push(text);
+      this.lastReport = text;
     }
   
     printReports() {
@@ -53,25 +71,24 @@ class Department {
     }
   }
   
-  const it = new ITDepartment('d1', ['Max']);
+//   const it = new ITDepartment('d1', ['Max']);
   
-  it.addEmployee('Max');
-  it.addEmployee('Manu');
+//   it.addEmployee('Max');
+//   it.addEmployee('Manu');
   
-  // it.employees[2] = 'Anna';
+//   // it.employees[2] = 'Anna';
   
-  it.describe();
-  it.name = 'NEW NAME';
-  it.printEmployeeInformation();
+//   it.describe();
+//   it.name = 'NEW NAME';
+//   it.printEmployeeInformation();
   
-  console.log(it);
+//   console.log(it);
   
   const accounting = new AccountingDepartment('d2', []);
   
   accounting.addReport('Something went wrong...');
-  
+  console.log(accounting.mostRecentReport)
+  accounting.mostRecentReport = 'Year end Report'
   accounting.printReports();
   
-  // const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
-  
-  // accountingCopy.describe();
+ 
