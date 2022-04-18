@@ -1,6 +1,9 @@
 "use strict";
-function makeNegative(num) {
-    return num >= 0 ? -num : num;
+function digitize(n) {
+    let arr = [];
+    n.toString().split("").forEach((e) => {
+        arr.unshift(+e);
+    });
+    return arr;
 }
-console.log(makeNegative(42));
-console.log(makeNegative(-42));
+console.log(digitize(35231));

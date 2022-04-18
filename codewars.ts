@@ -1,6 +1,9 @@
-function makeNegative(num: number):number {
-    return num >= 0 ? -num : num
+function digitize(n:number){
+    let arr:number[] = []
+    n.toString().split("").forEach((e) =>{
+        arr.unshift(+e)
+    })
+    return arr
 }
 
-console.log(makeNegative(42))
-console.log(makeNegative(-42))
+console.log(digitize(35231))
