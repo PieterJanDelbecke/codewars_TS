@@ -1,9 +1,6 @@
 "use strict";
-function digitize(n) {
-    let arr = [];
-    n.toString().split("").forEach((e) => {
-        arr.unshift(+e);
-    });
-    return arr;
+function solve(arr) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return arr.map(s => s.split('').reduce((t, c, i) => c.toLowerCase() === alphabet[i] ? t + 1 : t, 0));
 }
-console.log(digitize(35231));
+console.log(solve(["abode"]));
