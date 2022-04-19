@@ -1,6 +1,6 @@
 "use strict";
-function highAndLow(numbers) {
-    let arr = numbers.split(" ").map(e => +e);
-    return Math.max(...arr).toString() + " " + Math.min(...arr).toString();
+function disemvowel(str) {
+    let regex = /[aeuio]/gi;
+    return str.replace(regex, '');
 }
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+console.log(disemvowel("This website is for losers LOL!"));
