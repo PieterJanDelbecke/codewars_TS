@@ -1,5 +1,11 @@
-function disemvowel(str:string):string{
-    let regex = /[aeuio]/gi
-    return str.replace(regex,'')
+function getMiddle(s: string){
+    let arr = s.split("")
+    if (arr.length %2 === 0){
+        return arr[arr.length/2-1] + arr[arr.length/2]
+    } else {
+        return arr[Math.floor(arr.length/2)]
+    }
 }
-console.log(disemvowel("This website is for losers LOL!"))
+
+console.log(getMiddle("test"))
+console.log(getMiddle("testing"))
