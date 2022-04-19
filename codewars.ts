@@ -1,10 +1,6 @@
-function solve(arr:string[]){
-    const alphabet: string = 'abcdefghijklmnopqrstuvwxyz';
-    return arr.map(s=> 
-      s.split('').reduce(
-        (t,c,i) => c.toLowerCase() === alphabet[i] ? t + 1 : t
-      , 0) 
-    );
+function highAndLow(numbers:string){
+    let arr = numbers.split(" ").map ( e => +e)
+    return Math.max(...arr).toString() + " " + Math.min(...arr).toString()
 }
 
-console.log(solve(["abode"]))
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
