@@ -1,12 +1,10 @@
 "use strict";
-function getMiddle(s) {
-    let arr = s.split("");
-    if (arr.length % 2 === 0) {
-        return arr[arr.length / 2 - 1] + arr[arr.length / 2];
-    }
-    else {
-        return arr[Math.floor(arr.length / 2)];
-    }
+function toJadenCase(str) {
+    return str
+        .split(" ")
+        .map((word) => {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+        .join(" ");
 }
-console.log(getMiddle("test"));
-console.log(getMiddle("testing"));
+console.log(toJadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real"));
