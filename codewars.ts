@@ -1,9 +1,9 @@
-function toJadenCase(str: string):string{
-    return str
+function findShort (s:string): number {
+   return Math.min(
+    ...s
     .split(" ")
-    .map((word)=>{
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-    })
-    .join(" ")
+    .map(word => word.length)
+    )
 }
-console.log(toJadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real"))
+
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
