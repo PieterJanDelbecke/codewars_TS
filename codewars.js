@@ -1,13 +1,8 @@
 "use strict";
-function validatePin(num) {
-    let count = num.length;
-    let regex = /\D/g;
-    let found = num.match(regex);
-    return !found && (count === 4 || count === 6) ? true : false;
+function removeDuplicateWords(s) {
+    const wordArray = s.split(" ");
+    const wordSet = new Set(wordArray);
+    const result = Array.from(wordSet);
+    return result;
 }
-console.log(validatePin("1234"));
-console.log(validatePin("123a"));
-console.log(validatePin("4567"));
-console.log(validatePin("123"));
-console.log(validatePin("12345"));
-console.log(validatePin("1"));
+console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'));
