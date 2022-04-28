@@ -1,0 +1,9 @@
+.grid-container{
+    border: 1px black solid;
+}
+
+.grid-item{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
