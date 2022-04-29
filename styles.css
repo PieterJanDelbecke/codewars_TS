@@ -1,17 +1,11 @@
 .grid-container{
     border: 1px black solid;
     margin: 10px;
-    height: 300px;
 
     display: grid;
     grid-template-columns: auto auto auto;
-    /* column-gap: 150px; */
     grid-template-rows: auto auto;
-    /* row-gap: 100px; */
-    /* gap: 150px 100px; */
-    gap: 100px 150px;
-    /* justify-content: space-around;
-    align-content: center; */
+    
 }
 
 .grid-item{
