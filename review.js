@@ -1,4 +1,4 @@
-let string = "Extract the word 'coding' from this string"
-let regex = /word|coding/g
-let result = string.match(regex)
+let str = "hello world this is PI: 3.1415917"
+let regex = /[^2-6h-s]/ig
+let result = str.match(regex)
 console.log(result)
