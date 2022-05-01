@@ -1,3 +1,4 @@
-let result = new Set(['a','b','b','d', 1,2,1])
+let sample = "3 blind mice."
+let regex = /[^0-9aeiou]/ig
+let result = sample.match(regex)
 console.log(result)
-console.log(Array.from(result))
