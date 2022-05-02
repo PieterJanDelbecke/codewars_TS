@@ -1,4 +1,4 @@
-let string = "Cal and Ricky both like racing."
-let regex = /^Ricky/
+let string = "Ohhh no"
+let regex = /Oh{4,6} no/
 let result = regex.test(string)
 console.log(result)
