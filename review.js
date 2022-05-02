@@ -1,5 +1,6 @@
-let sampleWord = "1astr23ona3ut"
-let regex = /(?=\w{5})(?=\D*\d{2})/
-// let regex = /(?=\w{5})/
-let result =  regex.test(sampleWord)
-console.log(result)
+let repeatNum = "42 42 42"
+let regex = /(\d+)\s\1\s\1/
+let resultTest = regex.test(repeatNum)
+let resultMatch = repeatNum.match(regex)
+console.log(resultTest)
+console.log(resultMatch)
