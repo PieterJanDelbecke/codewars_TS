@@ -1,10 +1,24 @@
-function anchorize(text:string){
-    const regex = /((http|https|ftp|ftps|file|smb)\S+)/ig
-    let newStr = '<a href="$1">$1</a>'
-    return text.replace(regex, newStr)
+
+
+
+function test(word:string):boolean{
+    let regexNum = /[0-9]/    // checks if there is minimum 1 number
+    let regexLet = /[a-z]/    // checks if there is minimum 1 lowercase letter
+    let regex = /^[a-z0-9]{6,10}$/ 
+    let resultNum = regexNum.test(word)
+    let resultLet = regexLet.test(word)
+    let result = regex.test(word)
+    return result && resultNum && resultLet
 }
 
-console.log(anchorize("hello FTP://world.com !"))
+function authList(arr: string[]):boolean{
+   return arr.every(test)
+}
 
 
-// 'hello <a href="FTP://world.com">FTP://world.com</a> !'
+
+console.log(authList(['john123','alex222', 'sandra1', 'sandraW', 's']))
+// console.log(authList('alex222'))
+// console.log(authList('sandra1'))
+// console.log(authList('sandraW'))
+// console.log(authList('s'))
