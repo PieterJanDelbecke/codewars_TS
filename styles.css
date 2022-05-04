@@ -25,7 +25,11 @@
     font-size: 20px;
     color: white;
     background: rgb(89, 150 , 255);
-    transition: background-color,padding 2s ease 1s;
+    transform: rotate(-90deg);
+    transform: translate(50px, 30px);
+    -webkit-transition: background-color,padding 2s ease 0.2s;
+    -moz-transition: background-color,padding 2s ease 0.2s;
+    -o-transition: background-color,padding 2s ease 0.2s;
 }
 
 .submit-button:hover{
