@@ -1,29 +1,33 @@
 class Department {
-  // private id: string;
-  // private name: string;
+  private id: string
+  private name: string
   private employees: string[] = []
 
-  constructor (private name:string,private id: string){
-    this.name = name;
-    this.id = id;
+  constructor ( id: string, name: string){
+    this.id = id
+    this.name = name
   }
 
-  describe(this:Department) {
-    console.log("Department: " + this.name)
+  describe(this:Department){
+    console.log(`department: ${this.name}, ID: ${this.id}`)
   }
-  addEmployee(employee: string){
+
+  addEmployee(employee:string){
     this.employees.push(employee)
   }
-  printEmployeeInfo(){
-    console.log(this.employees.length)
-    console.log(this.employees)
-    console.log(this.name)
-    console.log(this.id)
+
+  outputInfo(){
+    console.log(`number of employees: ${this.employees.length}`)
+    this.employees.forEach( (employee, index) => {
+      console.log(`employee nr ${index +1} : ${employee}`)
+    })
   }
+
 }
 
-const accounting = new Department('Accounting','007')
-
+const accounting = new Department('A9', 'accounting')
 accounting.addEmployee('Pieter-Jan')
 accounting.addEmployee('Alessandra')
-accounting.printEmployeeInfo()
+accounting.describe()
+accounting.outputInfo()
+

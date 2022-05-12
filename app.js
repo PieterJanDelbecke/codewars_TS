@@ -1,28 +1,25 @@
 "use strict";
 class Department {
-    constructor(name, id) {
-        this.name = name;
-        this.id = id;
-        // private id: string;
-        // private name: string;
+    constructor(id, name) {
         this.employees = [];
-        this.name = name;
         this.id = id;
+        this.name = name;
     }
     describe() {
-        console.log("Department: " + this.name);
+        console.log(`department: ${this.name}, ID: ${this.id}`);
     }
     addEmployee(employee) {
         this.employees.push(employee);
     }
-    printEmployeeInfo() {
-        console.log(this.employees.length);
-        console.log(this.employees);
-        console.log(this.name);
-        console.log(this.id);
+    outputInfo() {
+        console.log(`number of employees: ${this.employees.length}`);
+        this.employees.forEach((employee, index) => {
+            console.log(`employee nr ${index + 1} : ${employee}`);
+        });
     }
 }
-const accounting = new Department('Accounting', '007');
+const accounting = new Department('A9', 'accounting');
 accounting.addEmployee('Pieter-Jan');
 accounting.addEmployee('Alessandra');
-accounting.printEmployeeInfo();
+accounting.describe();
+accounting.outputInfo();
