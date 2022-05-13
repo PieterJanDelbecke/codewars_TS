@@ -18,8 +18,14 @@ class Department {
         });
     }
 }
-const accounting = new Department('A9', 'accounting');
-accounting.addEmployee('Pieter-Jan');
-accounting.addEmployee('Alessandra');
-accounting.describe();
-accounting.outputInfo();
+class ITDepartment extends Department {
+    constructor(id, admins) {
+        super(id, 'IT');
+        this.admins = admins;
+    }
+}
+const IT = new ITDepartment("D6", ['Pieter', 'Max']);
+IT.addEmployee('Alessandra');
+IT.describe();
+IT.outputInfo();
+console.log(IT.admins);
