@@ -1,7 +1,13 @@
-function toJadenCase(str:string){
-    return str.split(" ").map(word =>{
-       return word.charAt(0).toUpperCase() + word.slice(1)
-    }).join(" ")
+function dontGiveMeFive(start: number, end: number) {
+    let count = 0;
+  for (let i = start; i <= end; i++) {
+    if(!i.toString().includes('5')){
+        count++
+    }
+  }
+  return count
 }
 
-console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
+console.log(dontGiveMeFive(1, 9));
+console.log(dontGiveMeFive(4, 17));
+console.log(dontGiveMeFive(53, 59));
