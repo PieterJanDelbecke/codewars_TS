@@ -2,10 +2,10 @@ const person= {
     name: "Dom",
     age: 28,
     vehicle: {
-        year: 2010
+        colour: "red"
     }
 }
 
-const vehicleYear = person.vehicle?.year
+const vehicleYear = person.school?.year ?? 1990
 
 console.log(vehicleYear)
