@@ -1,11 +1,11 @@
-const person= {
-    name: "Dom",
-    age: 28,
-    vehicle: {
-        colour: "red"
-    }
+const data = {
+    en: "english",
+    nl: "dutch",
+    it: "italian"
 }
 
-const vehicleYear = person.school?.year ?? 1990
+let newArray = []
 
-console.log(vehicleYear)
+for (const [key, value] of Object.entries(data)){
+    newArray.push({id: key, lang: value})
+}
