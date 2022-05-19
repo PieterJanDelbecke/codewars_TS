@@ -1,22 +1,31 @@
 const FW = [
-    {film: 'film1', price: 28},
-    {film: 'film2', price: 25},
-    {film: 'film3', price: 30},
+    {title: "film1", price: 40},
+    {title: "film2", price: 20},
+    {title: "film3", price: 15},
 ]
 
 const CW = [
-    {film: 'film1', price: 30},
-    {film: 'film2', price: 21},
-    {film: 'film3', price: 35},
+    {title: "film3", price: 18},
+    {title: "film1", price: 35},
+    {title: "film2", price: 25},
 ]
 
+films = []
 
-let arr = []
+for (const [key, value] of Object.entries(FW)){
+    films.push({
+        title: value.title,
+        priceFW: value.price,
+        priceCW: CW[key].price
+    })
+}
 
-FW.forEach((movie, index) => {
-    arr.push({film: movie.film, priceFW: movie.price, priceCW: CW[index].price})
-})
+// FW.forEach((film) => {
+//     films.push({
+//         title: film.title,
+//         priceFW: film.price,
+//         priceCW: CW[film.title].price
+//     })
+// })
 
-console.log(arr)
-
-
+console.log(films)
