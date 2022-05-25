@@ -1,9 +1,9 @@
-q::before{
+z::before{
     content: "<";
     color: blue;
 }
 
-q::after{
+z::after{
     content: ">";
     color: red;
 }
