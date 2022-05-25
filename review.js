@@ -1,8 +1,14 @@
-let hotels = [
-    {id: 1, hotel: "one"},
-    {id: 2, hotel: "two"},
-    {id: 3, hotel: "three"}
-]
+let lang = {
+    af: "Afrikaans",
+    nl: "Dutch",
+    en: "English",
+    fr: "French",
+    it: "Ftalian"
+}
 
-let chosenHotel = hotels.filter(hotel => hotel.id === 2)
-console.log(chosenHotel[0])
+let langArr = []
+for ( const [key, value] of Object.entries(lang)){
+    langArr.push({id: key, langague: value})
+}
+
+console.log(langArr)
