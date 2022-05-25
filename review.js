@@ -1,14 +1,13 @@
-let lang = {
-    af: "Afrikaans",
-    nl: "Dutch",
-    en: "English",
-    fr: "French",
-    it: "Ftalian"
+function squareNumber(number){
+    return new Promise ((resolve, reject) => {
+        if (typeof number !== 'number'){
+            reject(new Error("Input must be a number"))
+        }
+        resolve(number*number)
+    })
 }
 
-let langArr = []
-for ( const [key, value] of Object.entries(lang)){
-    langArr.push({id: key, langague: value})
-}
-
-console.log(langArr)
+squareNumber(false)
+    .then( squareNumber => console.log(typeof squareNumber, squareNumber))
+    .catch( error => console.log(error))
+    .finally(() => console.log("All good, the promise has finished"))
