@@ -1,13 +1,39 @@
-function squareNumber(number){
-    return new Promise ((resolve, reject) => {
-        if (typeof number !== 'number'){
-            reject(new Error("Input must be a number"))
-        }
-        resolve(number*number)
+function generateRandomNumber(limit){
+    console.log("Generating number between 1 - " + limit)
+    return new Promise((resolve, reject) => {
+        setTimeout(()=> {
+            if(typeof limit !== 'number'){
+                reject( new Error(`Input ${limit} is not a number`))
+            }
+            const randomNumber = Math.floor((Math.random()*limit) + 1)
+            console.log("Random number is: ", randomNumber)
+            resolve(randomNumber)
+        }, 1000)
     })
 }
 
-squareNumber(false)
-    .then( squareNumber => console.log(typeof squareNumber, squareNumber))
-    .catch( error => console.log(error))
-    .finally(() => console.log("All good, the promise has finished"))
+function doubleNumber(num){
+    return new Promise((resolve, reject) => {
+        if (num < 0){
+            reject( new Error("Can't be negative"))
+        }
+        resolve( num * 2)
+    })
+}
+
+function logIfSmall(num){
+    if (num > 15){
+        throw new Error(" That number is too big")
+    } else {
+        console.log("The doubled number is " + num)
+    }
+}
+
+generateRandomNumber(20)
+    .then(number => {
+        console.log("The number is " + number)
+        return number
+    })
+    .then(doubleNumber)
+    .then(logIfSmall)
+    .catch(error => console.error("caught error: " + error.message ))
