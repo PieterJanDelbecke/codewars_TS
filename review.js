@@ -1,39 +1,9 @@
-function generateRandomNumber(limit){
-    console.log("Generating number between 1 - " + limit)
-    return new Promise((resolve, reject) => {
-        setTimeout(()=> {
-            if(typeof limit !== 'number'){
-                reject( new Error(`Input ${limit} is not a number`))
-            }
-            const randomNumber = Math.floor((Math.random()*limit) + 1)
-            console.log("Random number is: ", randomNumber)
-            resolve(randomNumber)
-        }, 1000)
-    })
-}
+const promise1 = Promise.resolve(3)
+const promise2 = 42
+const promise3 = new Promise ((resolve, reject) => {
+    setTimeout(resolve, 2000, 'foo')
+})
 
-function doubleNumber(num){
-    return new Promise((resolve, reject) => {
-        if (num < 0){
-            reject( new Error("Can't be negative"))
-        }
-        resolve( num * 2)
-    })
-}
-
-function logIfSmall(num){
-    if (num > 15){
-        throw new Error(" That number is too big")
-    } else {
-        console.log("The doubled number is " + num)
-    }
-}
-
-generateRandomNumber(20)
-    .then(number => {
-        console.log("The number is " + number)
-        return number
-    })
-    .then(doubleNumber)
-    .then(logIfSmall)
-    .catch(error => console.error("caught error: " + error.message ))
+Promise.all([promise1, promise2, promise3]).then((values) => {
+    console.log(values)
+})
