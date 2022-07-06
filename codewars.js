@@ -1,7 +1,6 @@
-function toJadenCase(str){
-    return str.split(" ").map(element => {
-        return element.charAt(0).toUpperCase() + element.substring(1)
-    }).join(" ")
+function accum(s){
+    return s.toLowerCase().split("").map((letter, index) => letter.toUpperCase() + letter.repeat(index)).join("-")
 }
 
-console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
+console.log(accum("abcd"))
+console.log(accum("RqaEzty"))
