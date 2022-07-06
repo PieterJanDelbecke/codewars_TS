@@ -1,10 +1,6 @@
-function descendingOrder(n){
-    return Number(n.toString().split("").map(number => +number).sort((a,b) => b - a).join(""))
+function filter_list(l) {
+  return l.filter((item) => typeof item === "number");
 }
 
-console.log(descendingOrder(1021))
-console.log(descendingOrder(15))
-console.log(descendingOrder(0))
-console.log(descendingOrder(1))
-console.log(descendingOrder(123456789))
-console.log(descendingOrder(111))
+console.log(filter_list([1, 2, "a", "b"]));
+console.log(filter_list([1, "a", "b", 0, 15]));
