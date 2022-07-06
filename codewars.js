@@ -1,8 +1,7 @@
-function getCount(str){
+function disemvowel(str){
     const regex = /[a,e,i,o,u]/gi
-    const found =  str.match(regex)
-    return found ? found.length : 0
+    return str.replace(regex, '')
 }
 
-console.log(getCount("abracadabra"))
-console.log(getCount("my pyx"))
+console.log(disemvowel("This website is for losers LOL!"))
+console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read"))
