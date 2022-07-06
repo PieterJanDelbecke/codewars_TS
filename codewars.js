@@ -1,7 +1,10 @@
-function disemvowel(str){
-    const regex = /[a,e,i,o,u]/gi
-    return str.replace(regex, '')
+function descendingOrder(n){
+    return Number(n.toString().split("").map(number => +number).sort((a,b) => b - a).join(""))
 }
 
-console.log(disemvowel("This website is for losers LOL!"))
-console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read"))
+console.log(descendingOrder(1021))
+console.log(descendingOrder(15))
+console.log(descendingOrder(0))
+console.log(descendingOrder(1))
+console.log(descendingOrder(123456789))
+console.log(descendingOrder(111))
