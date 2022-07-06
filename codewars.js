@@ -1,7 +1,7 @@
-function highAndLow(numbers){
-    const arr = numbers.split(" ").map(number => +number)
-    return `${Math.max(...arr)} ${Math.min(...arr)}`
+function getMiddle(s){
+    let arr = s.split("").length
+    return arr %2 === 0 ? s.slice((arr/2 - 1),(arr/2 + 1)) : s.charAt(arr/2 )
 }
 
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
-console.log(highAndLow("1 2 3"))
+console.log(getMiddle("test"))
+console.log(getMiddle("testing"))
