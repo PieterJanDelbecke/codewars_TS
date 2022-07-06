@@ -1,13 +1,7 @@
-"use strict";
-function dontGiveMeFive(start, end) {
-    let count = 0;
-    for (let i = start; i <= end; i++) {
-        if (!i.toString().includes('5')) {
-            count++;
-        }
-    }
-    return count;
+function highAndLow(numbers){
+    const arr = numbers.split(" ").map(number => +number)
+    return `${Math.max(...arr)} ${Math.min(...arr)}`
 }
-console.log(dontGiveMeFive(1, 9));
-console.log(dontGiveMeFive(4, 17));
-console.log(dontGiveMeFive(53, 59));
+
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+console.log(highAndLow("1 2 3"))
