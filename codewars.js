@@ -1,7 +1,8 @@
-function getMiddle(s){
-    let arr = s.split("").length
-    return arr %2 === 0 ? s.slice((arr/2 - 1),(arr/2 + 1)) : s.charAt(arr/2 )
+function getCount(str){
+    const regex = /[a,e,i,o,u]/gi
+    const found =  str.match(regex)
+    return found ? found.length : 0
 }
 
-console.log(getMiddle("test"))
-console.log(getMiddle("testing"))
+console.log(getCount("abracadabra"))
+console.log(getCount("my pyx"))
