@@ -1,6 +1,7 @@
-function filter_list(l) {
-  return l.filter((item) => typeof item === "number");
+function toJadenCase(str){
+    return str.split(" ").map(element => {
+        return element.charAt(0).toUpperCase() + element.substring(1)
+    }).join(" ")
 }
 
-console.log(filter_list([1, 2, "a", "b"]));
-console.log(filter_list([1, "a", "b", 0, 15]));
+console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
