@@ -1,6 +1,9 @@
-function accum(s){
-    return s.toLowerCase().split("").map((letter, index) => letter.toUpperCase() + letter.repeat(index)).join("-")
+const myObject = {
+    firstName : "Pieter-Jan",
+    lastName: "Delbecke",
+    city: "Sydney",
+    postcode: "2100"
 }
 
-console.log(accum("abcd"))
-console.log(accum("RqaEzty"))
+const myValues = Object.values(myObject)
+console.log(myValues)
