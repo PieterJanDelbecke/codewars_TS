@@ -1,7 +1,6 @@
-function highAndLow(numbers){
-    const arr = numbers.split(" ").sort((a, b) => a - b)
-    const newArr= `${arr[arr.length-1]} ${arr[0]}`
-    return newArr
-}
+const even = [0,2,4,6,8]
+const odd = [1,3,5,7,9]
 
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+const total = [...even, ...odd].sort((a,b) => a -b )
+
+console.log(total)
