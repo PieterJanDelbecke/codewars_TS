@@ -5,3 +5,5 @@ const total = [...even, ...odd].sort((a,b) => a -b )
 
 console.log(total)
 console.log(total)
+console.log(total)
+console.log(total)
