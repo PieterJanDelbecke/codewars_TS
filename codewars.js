@@ -1,9 +1,5 @@
-const even = [0,2,4,6,8]
-const odd = [1,3,5,7,9]
+function squreDigits(num){
+    return Number(num.toString().split("").map(number => Math.pow(Number(number), 2)).join(""))
+}
 
-const total = [...even, ...odd].sort((a,b) => a -b )
-
-console.log(total)
-console.log(total)
-console.log(total)
-console.log(total)
+console.log(squreDigits(3212))
