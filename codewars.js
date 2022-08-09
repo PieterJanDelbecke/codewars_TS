@@ -1,5 +1,14 @@
-function squreDigits(num){
-    return Number(num.toString().split("").map(number => Math.pow(Number(number), 2)).join(""))
+function descendingOrder(n) {
+  return Number(
+    n
+      .toString()
+      .split("")
+      .map((item) => Number(item))
+      .sort((a, b) => b - a)
+      .map((item) => item.toString())
+      .join("")
+  );
 }
 
-console.log(squreDigits(3212))
+console.log(descendingOrder(1021));
+console.log(descendingOrder(15));
