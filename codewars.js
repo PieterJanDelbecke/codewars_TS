@@ -1,9 +1,5 @@
-const numbers = {
-    one: 1,
-    two: 2,
-    three: 3
-}
+const numbers = [1,2,3,4,5,6,7,8,9]
 
-console.log(numbers)
-console.log(numbers.two)
-console.log(numbers["two"])
+const even = numbers.filter(number => number%2 === 0)
+
+console.log(even)
