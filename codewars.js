@@ -1,4 +1,11 @@
-let myArray = [0,1,2,3,4,5,6,7,8,9]
+function XO(str){
+    const x = str.toLowerCase().split("").filter((item) => item === 'x').length
+    const o = str.toLowerCase().split("").filter((item) => item === 'o').length
+    return x === o ? true : false
+}
 
-let result = myArray.splice(1,1)
-console.log({myArray, result})
+console.log((XO('xo')))
+console.log((XO('xxOo')))
+console.log((XO('xxxm')))
+console.log((XO('Oo')))
+console.log((XO('ooom')))
