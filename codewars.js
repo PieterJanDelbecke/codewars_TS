@@ -1,10 +1,5 @@
 function maskify(cc){
-    let arr =[]
-    const stringLength = cc.length - 4
-    arr = cc.split("").map((item, value) => {
-        return value < stringLength ? '#' : item
-    })
-    return arr.join("")
+    return cc.split("").map((item, value) => value < (cc.length - 4) ? '#' : item).join("")
 
 }
 
