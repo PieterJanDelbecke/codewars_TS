@@ -1,9 +1,9 @@
-function longest(s1, s2) {
-  const mySet = new Set();
-  (s1 + s2).split("").forEach((item) => {
-    mySet.add(item);
-  });
-  return Array.from(mySet).sort().join("")
-}
+// import countryCodes from "./countryCodes";
 
-console.log(longest("aretheyhere", "yestheyarehere"));
+// const string = "hello, world"
+const string = "world, hello"
+let myRegex = /Hello/i
+let result = myRegex.test(string)
+
+
+console.log(result)
