@@ -8,5 +8,8 @@
     "start": "lite-server"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
 }
