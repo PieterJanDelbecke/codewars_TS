@@ -1,7 +1,9 @@
 .container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    /* display: flex; */
+    /* justify-content: center; */
+    border: 1px solid red;
+    margin: 5px;
 }
 
 .main{
