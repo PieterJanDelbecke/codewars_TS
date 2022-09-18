@@ -13,3 +13,12 @@
     border: 1px solid black;
     margin: 5px;
 }
+
+.button{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 20px;
+    border-start-start-radius: 10px;
+    border-end-start-radius: 10px
+}
