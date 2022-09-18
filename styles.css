@@ -1,9 +1,13 @@
-z::before{
-    content: "<";
-    color: blue;
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-z::after{
-    content: ">";
-    color: red;
+.main{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin: 5px;
 }
