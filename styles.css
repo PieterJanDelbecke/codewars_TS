@@ -1,24 +1,9 @@
 .container{
-    display: inline-flex;
-    /* display: flex; */
-    /* justify-content: center; */
     border: 1px solid red;
     margin: 5px;
+
 }
 
-.main{
-    width: 100px;
-    height: 100px;
+.container:hover > h1 {
     background-color: yellow;
-    border: 1px solid black;
-    margin: 5px;
-}
-
-.button{
-    width: 100px;
-    height: 100px;
-    background-color: orange;
-    margin: 20px;
-    border-start-start-radius: 10px;
-    border-end-start-radius: 10px
 }
