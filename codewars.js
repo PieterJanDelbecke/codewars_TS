@@ -1,15 +1,4 @@
-// import moment from "moment"
+const arr = [{one:"one"},{two:"two"},{three: "three"}]
 
-function dateToUnix(dateStr){
-    const date = new Date(dateStr)
-    return Math.floor(date.getTime()/1000)
-}
-
-
-console.log(dateToUnix("2022-06-22"))
-
-// const dateStr = '2022-06-22'
-// console.log(date)
-
-// console.log(unixTimeStamp)
-
+const newArr = [...arr,{two:"four"}]
+console.log(newArr)
