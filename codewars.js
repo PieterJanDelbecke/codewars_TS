@@ -1,4 +1,8 @@
-const arr = [{one:"one"},{two:"two"},{three: "three"}]
+const arr = [{one:"one"},{two:"two"},{three: "three"},{four:"four"}]
 
-const newArr = [...arr,{two:"four"}]
-console.log(newArr)
+const data = {
+    xxx:"xxx"
+}
+
+arr.splice(2,1,data)
+console.log(arr)
