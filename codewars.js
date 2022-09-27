@@ -1,8 +1,13 @@
-const arr = [{one:"one"},{two:"two"},{three: "three"},{four:"four"}]
+const columns = [
+    ["name", { value: "Name", type: "text" }],
+    ["status", { value: "Status", type: "text" }],
+    ["priority", { value: "Priority", type: "text" }],
+    ["email", { value: "Email", type: "text" }],
+    ["phone", { value: "Phone", type: "text" }],
+    ["source", { value: "Source", type: "text" }],
+    ["from", { value: "From", type: "text" }],
+];
 
-const data = {
-    xxx:"xxx"
-}
-
-arr.splice(2,1,data)
-console.log(arr)
+columns.map((item, idx) => {
+    console.log(item[0])
+})
