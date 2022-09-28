@@ -1,12 +1,17 @@
-class Rectangle {
-    constructor(width,height){
-        this.width = width;
-        this.height = height;
-    }
-    area() {
-        return this.height * this.width
+class StockItem {
+    static total_qty = 0
+
+    constructor (description, qty){
+        this.description = description
+        this.qty = qty
+        StockItem.total_qty += qty
     }
 }
 
-let rect = new Rectangle(10, 5)
-console.log(rect.area())
+warehouse = [
+    new StockItem("CPU", 10),
+    new StockItem("Motherboard", 5),
+    new StockItem("RAM", 20)
+]
+
+console.log(`Total Stock: ${StockItem.total_qty}`)
