@@ -1,17 +1,21 @@
-class StockItem {
-    static total_qty = 0
-
-    constructor (description, qty){
-        this.description = description
-        this.qty = qty
-        StockItem.total_qty += qty
-    }
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    return `My name is ${this.name}!`;
+  }
 }
 
-warehouse = [
-    new StockItem("CPU", 10),
-    new StockItem("Motherboard", 5),
-    new StockItem("RAM", 20)
-]
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  speak() {
+    return `Woof! ${super.speak()}, I'm a ${this.breed}`;
+  }
+}
 
-console.log(`Total Stock: ${StockItem.total_qty}`)
+let ted = new Dog ("Ted", "Border Collie")
+console.log(ted.speak())
