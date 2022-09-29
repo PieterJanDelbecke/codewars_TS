@@ -1,21 +1,18 @@
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-  speak() {
-    return `My name is ${this.name}!`;
-  }
+c1 = {
+    x: 10,
+    y: 20
+}
+c2 ={
+    x: 33,
+    y: 66
 }
 
-class Dog extends Animal {
-  constructor(name, breed) {
-    super(name);
-    this.breed = breed;
-  }
-  speak() {
-    return `Woof! ${super.speak()}, I'm a ${this.breed}`;
-  }
+function printCoordinates(){
+    console.log(this.x, this.y)
 }
 
-let ted = new Dog ("Ted", "Border Collie")
-console.log(ted.speak())
+c1_func = printCoordinates.bind(c1)
+c2_func = printCoordinates.bind(c2)
+
+c1_func()
+c2_func()
