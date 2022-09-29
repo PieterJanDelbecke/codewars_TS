@@ -1,25 +1,28 @@
-const initialColumns = [
-    ["name", { value: "Name", type: "text" }],
-    ["status", { value: "Status", type: "text" }],
-    ["priority", { value: "Priority", type: "text" }],
-    ["email", { value: "Email", type: "text" }],
-    ["phone", { value: "Phone", type: "text" }],
-    ["source", { value: "Source", type: "text" }],
-    ["from", { value: "From", type: "text" }],
-];
+class Car {
+    constructor (wheels, color){
+        this.wheels = wheels;
+        this.color = color;
+        this.speed = 200;
+    }
 
-const myMap = new Map(
-    initialColumns.map((column, index) => {
-        column[1].order = index;
-        return column;
-    })
-)
-
-const set = new Set()
-const numbers = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]
-for (let number of numbers ){
-    set.add(number)
+    drive(){
+        console.log(`Vroom, vroom,... I'm a ${this.color} car with ${this.wheels} wheels `)
+    }
+    fast(){
+        console.log(`I can drive up to ${this.speed} km per hour`)
+    }
 }
 
-console.log(...myMap)
-console.log([...set])
+class Mazda extends Car {
+    constructor(wheels, color, price){
+        super(wheels,color)
+        this.price = price
+    }
+    purchase(){
+        console.log(`The price of my mazda was ${this.price}`)
+    }
+}
+
+const myCar = new Mazda(6, "green", 10000)
+myCar.drive()
+myCar.purchase()
