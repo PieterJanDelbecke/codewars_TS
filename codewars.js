@@ -1,28 +1,12 @@
-class Car {
-    constructor (wheels, color){
-        this.wheels = wheels;
-        this.color = color;
-        this.speed = 200;
-    }
+const arr = [0,1,2,3,4]
+const arr2 = [...arr, 5,6,7,8,9]
 
-    drive(){
-        console.log(`Vroom, vroom,... I'm a ${this.color} car with ${this.wheels} wheels `)
-    }
-    fast(){
-        console.log(`I can drive up to ${this.speed} km per hour`)
-    }
+// console.log(arr2)
+
+const obj = {
+    one: "one",
+    two: "two"
 }
 
-class Mazda extends Car {
-    constructor(wheels, color, price){
-        super(wheels,color)
-        this.price = price
-    }
-    purchase(){
-        console.log(`The price of my mazda was ${this.price}`)
-    }
-}
-
-const myCar = new Mazda(6, "green", 10000)
-myCar.drive()
-myCar.purchase()
+const obj2 = {...obj, two: "three"}
+console.log(obj2)
