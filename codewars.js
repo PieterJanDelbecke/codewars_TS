@@ -1,9 +1,9 @@
-const entries = new Map([
-    ['foo', 'bar'],
-    ['baz', 42]
-])
+const data = {
+    name: "me",
+    status: "new",
+    email: "pjdelbecke@growmofo.com"
+}
 
-console.log(entries)
-const obj = Object.fromEntries(entries)
+const dataEntries = Object.entries(data)
 
-console.log(obj)
+console.log(dataEntries)
