@@ -1,12 +1,9 @@
-const arr = [0,1,2,3,4]
-const arr2 = [...arr, 5,6,7,8,9]
+const entries = new Map([
+    ['foo', 'bar'],
+    ['baz', 42]
+])
 
-// console.log(arr2)
+console.log(entries)
+const obj = Object.fromEntries(entries)
 
-const obj = {
-    one: "one",
-    two: "two"
-}
-
-const obj2 = {...obj, two: "three"}
-console.log(obj2)
+console.log(obj)
