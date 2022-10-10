@@ -1,9 +1,8 @@
-const data = {
-    name: "me",
-    status: "new",
-    email: "pjdelbecke@growmofo.com"
-}
+const map = new Map()
 
-const dataEntries = Object.entries(data)
+map.set('mdn', {one: "one"})
+map.set('w3s', 'two')
+const two = map.get('mdn')
 
-console.log(dataEntries)
+console.log(map)
+console.log(two)
