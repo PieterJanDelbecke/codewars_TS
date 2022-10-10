@@ -6,6 +6,6 @@ const two = map.get('mdn')
 
 const obj = Object.fromEntries(map)
 
-console.log(map)
-console.log(two)
-console.log(obj)
+const one = map.values()
+
+console.log(one)
