@@ -1,8 +1,4 @@
-const myArr = [1,2,3,4,5]
+const myMap = new Map([[1, 'one'],[2,'two']])
+myMap.set(3,"three")
 
-const mySet = new Set(myArr)
-
-mySet.add('6')
-mySet.has(3)
-
-console.log(mySet)
+console.log(myMap)
