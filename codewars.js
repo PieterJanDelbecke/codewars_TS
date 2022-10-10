@@ -1,11 +1,8 @@
-const map = new Map()
+const myArr = [1,2,3,4,5]
 
-map.set('mdn', {one: "one"})
-map.set('w3s', 'two')
-const two = map.get('mdn')
+const mySet = new Set(myArr)
 
-const obj = Object.fromEntries(map)
+mySet.add('6')
+mySet.has(3)
 
-const one = map.values()
-
-console.log(one)
+console.log(mySet)
