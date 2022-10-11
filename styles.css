@@ -13,3 +13,8 @@
     background-color: orange;
     margin: 5px;
 }
+
+.c1{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
