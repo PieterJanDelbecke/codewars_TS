@@ -1,4 +1,7 @@
-const myMap = new Map([['one',1], ['two', [2,2,4,5,6 ]]])
-myMap.set('three', 3)
+const myMap = new Map()
 
-console.log([...myMap])
+myMap.set('one', new Map())
+
+myMap.get("one").set("two", 222)
+
+console.log(myMap)
