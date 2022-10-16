@@ -6,4 +6,6 @@ const myObj = {
 
 const string = JSON.stringify(myObj)
 
-console.log(string)
+const back = JSON.parse(string)
+
+console.log(back)
