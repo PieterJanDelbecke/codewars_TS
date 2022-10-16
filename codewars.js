@@ -1,6 +1,9 @@
-const myMap = new Map()
+const myObj = {
+    one: 1,
+    two: 2,
+    three: 3
+}
 
-myMap.set('one', 1)
-myMap.set('two',2)
+const string = JSON.stringify(myObj)
 
-console.log(myMap)
+console.log(string)
