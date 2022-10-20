@@ -1,3 +1,3 @@
-const formData = new FormData()
+const arr = [0,1,2]
 
-console.log(formData)
+console.log(arr.at(-1))
