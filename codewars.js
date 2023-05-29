@@ -1,7 +1,12 @@
-function getCount(str) {
-  const vowels = str.match(/[aeiou]/gi);
-  return vowels ? vowels.length : 0;
+function squareDigits(num) {
+  return +num
+    .toString()
+    .split("")
+    .map((number) => {
+      return Math.pow(number, 2);
+    })
+    .join("");
 }
 
-console.log(getCount("abracadabra"));
-console.log(getCount("qwrty"));
+console.log(squareDigits(3212));
+console.log(squareDigits(2112));
