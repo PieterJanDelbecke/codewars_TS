@@ -1,8 +1,6 @@
-function hightAndLow(numbers) {
-  const newNumbers = numbers.split(" ");
-  const min = Math.min(...newNumbers);
-  const max = Math.max(...newNumbers);
-  return `${max} ${min}`;
+function getCount(string) {
+  const vowels = string.match(/[aeiou]/gi);
+  return vowels ? vowels.length : 0;
 }
 
-console.log(hightAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+console.log(getCount("abracadabra"));
