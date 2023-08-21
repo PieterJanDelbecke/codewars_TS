@@ -1,12 +1,8 @@
-function squareDigits(num) {
-  return +num
-    .toString()
-    .split("")
-    .map((number) => {
-      return Math.pow(number, 2);
-    })
-    .join("");
-}
+// function getCount(str) {
+//   const myStr = str.split("");
+//   return myStr
+// }
 
-console.log(squareDigits(3212));
-console.log(squareDigits(2112));
+// console.log(getCount("Hello"));
+
+console.log("Hello");
