@@ -1,12 +1,11 @@
-// function getCount(str) {
-//   const regex = /[aouie]/gi;
-//   const found = str.match(regex);
-//   return found ? found.join("").length : 0;
-// }
-
-function getCount(str) {
-  return (str.match(/[aeiou]/gi) || []).length;
+function squareDigits(num) {
+  const myNum = num
+    .toString()
+    .split("")
+    .map((num) => Math.pow(+num, 2));
+  return +myNum.join("");
 }
 
-console.log(getCount("Hello"));
-console.log(getCount("my pyx"));
+console.log(squareDigits(3212));
+console.log(squareDigits(2112));
+console.log(squareDigits(0));
