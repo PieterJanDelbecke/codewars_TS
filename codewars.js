@@ -1,8 +1,7 @@
-// function getCount(str) {
-//   const myStr = str.split("");
-//   return myStr
-// }
+function getCount(str) {
+  const regex = /[aouie]/gi;
+  const found = str.match(regex);
+  return found.join("").length;
+}
 
-// console.log(getCount("Hello"));
-
-console.log("Hello");
+console.log(getCount("Hello"));
