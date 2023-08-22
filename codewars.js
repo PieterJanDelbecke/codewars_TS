@@ -1,7 +1,10 @@
-function highAndLow(numbers) {
-  numbers = numbers.split(" ");
-  return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+function descendingOrder(n) {
+  return +n
+    .toString()
+    .split("")
+    .sort((a, b) => b - a)
+    .join("");
 }
 
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
-console.log(highAndLow("1 2 3"));
+console.log(descendingOrder(1021));
+console.log(descendingOrder(15));
