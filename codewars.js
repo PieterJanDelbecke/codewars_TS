@@ -1,11 +1,10 @@
-function squareDigits(num) {
-  const myNum = num
-    .toString()
-    .split("")
-    .map((num) => Math.pow(+num, 2));
-  return +myNum.join("");
+function highAndLow(numbers) {
+  const myNumbers = numbers
+    .split(" ")
+    .map((number) => +number)
+    .sort((a, b) => a - b);
+  return `${Math.max(...myNumbers)} ${Math.min(...myNumbers)}`;
 }
 
-console.log(squareDigits(3212));
-console.log(squareDigits(2112));
-console.log(squareDigits(0));
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+console.log(highAndLow("1 2 3"));
