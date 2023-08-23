@@ -1,10 +1,13 @@
-function descendingOrder(n) {
-  return +n
-    .toString()
-    .split("")
-    .sort((a, b) => b - a)
-    .join("");
+function getMiddle(s) {
+  const middle = Math.floor(s.length / 2);
+  if (s.length % 2 === 0) {
+    return s.slice(middle - 1, middle + 1);
+  } else {
+    return s.charAt(middle);
+  }
 }
 
-console.log(descendingOrder(1021));
-console.log(descendingOrder(15));
+console.log(getMiddle("test"));
+console.log(getMiddle("testing"));
+console.log(getMiddle("middle"));
+console.log(getMiddle("A"));
