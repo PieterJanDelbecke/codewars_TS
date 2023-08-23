@@ -1,16 +1,20 @@
-function accum(s) {
-  s = s.split("").map((letter, index) => {
-    let string = [];
-    for (let i = 0; i <= index; i++) {
-      if (i === 0) {
-        string.push(letter.toUpperCase());
-      } else {
-        string.push(letter.toLowerCase());
-      }
+const e = require("express");
+
+function isSquare(n) {
+  if (n < 0) {
+    return false;
+  } else {
+    if (Math.sqrt(n) % 1 === 0) {
+      return true;
+    } else {
+      return false;
     }
-    return string.join("");
-  });
-  return s.join("-");
+  }
 }
 
-console.log(accum("ZpglnRxqenU"));
+console.log(isSquare(-1));
+console.log(isSquare(0));
+console.log(isSquare(3));
+console.log(isSquare(4));
+console.log(isSquare(25));
+console.log(isSquare(26));
