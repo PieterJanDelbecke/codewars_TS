@@ -1,8 +1,7 @@
 function isIsogram(str) {
-  str = str.split("");
+  str = str.toLowerCase().split("");
   const myStr = str.map((letter) => {
-    return str.filter((item) => item.toLowerCase() === letter.toLowerCase())
-      .length;
+    return str.filter((item) => item === letter).length;
   });
   const myArr = myStr.find((number) => number > 1);
   return myArr ? false : true;
