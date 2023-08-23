@@ -1,13 +1,27 @@
-function isIsogram(str) {
+// function XO(str) {
+//   let x = 0;
+//   let o = 0;
+//   str = str
+//     .toLowerCase()
+//     .split("")
+//     .map((i) => {
+//       if (i === "x") x++;
+//       if (i === "o") o++;
+//     });
+//   return x === o ? true : false;
+// }
+
+function XO(str) {
   str = str.toLowerCase().split("");
-  const myStr = str.map((letter) => {
-    return str.filter((item) => item === letter).length;
-  });
-  const myArr = myStr.find((number) => number > 1);
-  return myArr ? false : true;
+  return (
+    str.filter((l) => l === "x").length === str.filter((l) => l === "o").length
+  );
 }
 
-console.log(isIsogram("Dermatoglyphics"));
-console.log(isIsogram("isogram"));
-console.log(isIsogram("aba"));
-console.log(isIsogram("moOse"));
+console.log(XO("xo"));
+console.log("-----------------------");
+console.log(XO("xxOo"));
+console.log("-----------------------");
+console.log(XO("xxxm"));
+// console.log(XO("Oo"));
+// console.log(XO("ooom"));
