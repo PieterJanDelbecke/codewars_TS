@@ -1,11 +1,16 @@
-function getMiddle(s) {
-  const middle = Math.floor(s.length / 2);
-  return s.length % 2 === 0
-    ? s.slice(middle - 1, middle + 1)
-    : s.charAt(middle);
+function accum(s) {
+  s = s.split("").map((letter, index) => {
+    let string = [];
+    for (let i = 0; i <= index; i++) {
+      if (i === 0) {
+        string.push(letter.toUpperCase());
+      } else {
+        string.push(letter.toLowerCase());
+      }
+    }
+    return string.join("");
+  });
+  return s.join("-");
 }
 
-console.log(getMiddle("test"));
-console.log(getMiddle("testing"));
-console.log(getMiddle("middle"));
-console.log(getMiddle("A"));
+console.log(accum("ZpglnRxqenU"));
