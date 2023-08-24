@@ -2,9 +2,7 @@ function toJadenCase(str) {
   return str
     .split(" ")
     .map((word) => {
-      const first = word.charAt(0).toUpperCase();
-      const rest = word.slice(1).toLowerCase();
-      return `${first}${rest}`;
+      return word.charAt(0).toUpperCase() + word.slice(1);
     })
     .join(" ");
 }
