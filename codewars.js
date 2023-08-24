@@ -1,21 +1,9 @@
 function DNAStrand(dna) {
+  const pairs = { A: "T", T: "A", C: "G", G: "C" };
   return dna
     .split("")
-    .map((i) => {
-      switch (i) {
-        case "A":
-          return "T";
-          break;
-        case "T":
-          return "A";
-          break;
-        case "C":
-          return "G";
-          break;
-        case "G":
-          return "C";
-          break;
-      }
+    .map((letter) => {
+      return pairs[letter];
     })
     .join("");
 }
