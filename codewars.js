@@ -1,10 +1,5 @@
-function toJadenCase(str) {
-  return str
-    .split(" ")
-    .map((word) => {
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    .join(" ");
+function findShort(s) {
+  return Math.min(...s.split(" ").map((word) => word.length));
 }
 
-console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
