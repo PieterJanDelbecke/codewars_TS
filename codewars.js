@@ -1,27 +1,12 @@
-// function XO(str) {
-//   let x = 0;
-//   let o = 0;
-//   str = str
-//     .toLowerCase()
-//     .split("")
-//     .map((i) => {
-//       if (i === "x") x++;
-//       if (i === "o") o++;
-//     });
-//   return x === o ? true : false;
-// }
-
-function XO(str) {
-  str = str.toLowerCase().split("");
-  return (
-    str.filter((l) => l === "x").length === str.filter((l) => l === "o").length
-  );
+function toJadenCase(str) {
+  return str
+    .split(" ")
+    .map((word) => {
+      const first = word.charAt(0).toUpperCase();
+      const rest = word.slice(1).toLowerCase();
+      return `${first}${rest}`;
+    })
+    .join(" ");
 }
 
-console.log(XO("xo"));
-console.log("-----------------------");
-console.log(XO("xxOo"));
-console.log("-----------------------");
-console.log(XO("xxxm"));
-// console.log(XO("Oo"));
-// console.log(XO("ooom"));
+console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
