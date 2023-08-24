@@ -1,13 +1,6 @@
-function DNAStrand(dna) {
-  const pairs = { A: "T", T: "A", C: "G", G: "C" };
-  return dna
-    .split("")
-    .map((letter) => {
-      return pairs[letter];
-    })
-    .join("");
+function sumTwoSmallestNumbes(numbers) {
+  numbers = numbers.sort((a, b) => a - b);
+  return numbers[0] + numbers[1];
 }
 
-console.log(DNAStrand("AAAA"));
-console.log(DNAStrand("ATTGC"));
-console.log(DNAStrand("GTAT"));
+console.log(sumTwoSmallestNumbes([5, 8, 12, 19, 22]));
