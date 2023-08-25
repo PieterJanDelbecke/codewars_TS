@@ -1,5 +1,14 @@
-function friend(friends) {
-  return friends.filter((friend) => friend.length === 4);
+function openOrSenior(data) {
+  return data.map(([age, handicap]) => {
+    return age >= 55 && handicap > 7 ? "Senior" : "Open";
+  });
 }
 
-console.log(friend(["Ryan", "Kieran", "Mark"]));
+console.log(
+  openOrSenior([
+    [45, 12],
+    [55, 21],
+    [19, -2],
+    [104, 20],
+  ])
+);
