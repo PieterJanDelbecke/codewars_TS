@@ -1,7 +1,9 @@
-function longest(s1, s2) {
-  return Array.from(new Set(s1 + s2))
-    .sort()
-    .join("");
+function friend(friends) {
+  const myFriends = [];
+  friends.forEach((friend) => {
+    if (friend.length === 4) myFriends.push(friend);
+  });
+  return myFriends;
 }
 
-console.log(longest("aretheyhere", "yestheyarehere"));
+console.log(friend(["Ryan", "Kieran", "Mark"]));
