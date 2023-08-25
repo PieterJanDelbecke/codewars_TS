@@ -1,6 +1,9 @@
-function findNextSquare(sq) {
-  return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) + 1, 2);
+function printerError(s) {
+  const regex = /[n-z]/gi;
+  const found = s.match(regex);
+  return `${found.length}/${s.length}`;
 }
 
-console.log(findNextSquare(121));
-console.log(findNextSquare(114));
+console.log(
+  printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+);
