@@ -1,9 +1,5 @@
 function friend(friends) {
-  const myFriends = [];
-  friends.forEach((friend) => {
-    if (friend.length === 4) myFriends.push(friend);
-  });
-  return myFriends;
+  return friends.filter((friend) => friend.length === 4);
 }
 
 console.log(friend(["Ryan", "Kieran", "Mark"]));
