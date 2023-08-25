@@ -1,15 +1,7 @@
-function getSum(a, b) {
-  [a, b] = [a, b].sort((c, d) => c - d);
-  let sum = 0;
-  for (let i = a; i <= b; i++) {
-    sum += i;
-  }
-  return sum;
+function longest(s1, s2) {
+  const s = (s1 + s2).split("").sort();
+  const mySet = new Set(s);
+  return Array.from(mySet).join("");
 }
 
-console.log(getSum(1, 0));
-console.log(getSum(1, 2));
-console.log(getSum(0, 1));
-console.log(getSum(1, 1));
-console.log(getSum(-1, 0));
-console.log(getSum(-1, 2));
+console.log(longest("aretheyhere", "yestheyarehere"));
