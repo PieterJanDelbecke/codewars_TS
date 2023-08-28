@@ -1,6 +1,13 @@
-function solution(str, ending) {
-  return str.endsWith(ending);
+function binaryArrayToNumber(arr) {
+  let total = 0;
+  let value = 1;
+  arr.reverse().forEach((num) => {
+    total += num * value;
+    value *= 2;
+  });
+  return total;
 }
 
-console.log(solution("abcde", "cde"));
-console.log(solution("abcde", "abc"));
+console.log(binaryArrayToNumber([0, 0, 0, 1]));
+console.log(binaryArrayToNumber([0, 0, 1, 0]));
+console.log(binaryArrayToNumber([1, 1, 1, 1]));
