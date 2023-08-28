@@ -1,10 +1,12 @@
-function oddOrEven(arr) {
-  return arr.reduce((a, b) => a + b, 0) % 2 ? "odd" : "even";
+function divisors(integer) {
+  const divisorsArr = [];
+  for (let i = 2; i < integer; i++) {
+    if (integer % i === 0) {
+      divisorsArr.push(i);
+    }
+  }
+  return divisorsArr.length ? `${integer} is prime` : divisorsArr;
 }
 
-console.log(oddOrEven([0, 1, 5]));
-console.log(oddOrEven([0, 1, 3]));
-console.log(oddOrEven([1023, 1, 2]));
-// console.log(oddOrEven([]));
-// console.log(oddOrEven([0]));
-// console.log(oddOrEven([1]));
+console.log(divisors(15));
+console.log(divisors(13));
