@@ -5,6 +5,6 @@ function oddOrEven(arr) {
 console.log(oddOrEven([0, 1, 5]));
 console.log(oddOrEven([0, 1, 3]));
 console.log(oddOrEven([1023, 1, 2]));
-console.log(oddOrEven([]));
-console.log(oddOrEven([0]));
-console.log(oddOrEven([1]));
+// console.log(oddOrEven([]));
+// console.log(oddOrEven([0]));
+// console.log(oddOrEven([1]));
