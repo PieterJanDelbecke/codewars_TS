@@ -1,5 +1,7 @@
-function addBinary(a, b) {
-  return (a + b).toString(2);
+function solution(str, ending) {
+  const regex = new RegExp(ending + "$");
+  return regex.test(str);
 }
 
-console.log(addBinary(1, 2));
+console.log(solution("abcde", "cde"));
+console.log(solution("abcde", "abc"));
