@@ -1,6 +1,5 @@
 function solution(str, ending) {
-  const regex = new RegExp(ending + "$");
-  return regex.test(str);
+  return str.endsWith(ending);
 }
 
 console.log(solution("abcde", "cde"));
