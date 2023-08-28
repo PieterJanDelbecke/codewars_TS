@@ -1,7 +1,5 @@
-function oddOrEven(array) {
-  if (array.length === 0) return "even";
-  const myArr = array.reduce((a, b) => a + b);
-  return myArr % 2 === 0 ? "even" : "odd";
+function oddOrEven(arr) {
+  return arr.reduce((a, b) => a + b, 0) % 2 ? "odd" : "even";
 }
 
 console.log(oddOrEven([0, 1, 5]));
