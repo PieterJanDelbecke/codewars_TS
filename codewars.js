@@ -1,8 +1,5 @@
-function testing(array) {
-  return array.map((num, index) => {
-    return `${index + 1}: ${num}`;
-  });
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
 }
 
-console.log(testing(["a", "b", "c"]));
-console.log(testing([]));
+console.log(minMax([1, 2, 3, 4, 5]));
