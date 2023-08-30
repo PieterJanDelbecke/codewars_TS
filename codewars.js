@@ -1,5 +1,11 @@
-function minMax(arr) {
-  return [Math.min(...arr), Math.max(...arr)];
+function dontGiveMeFive(start, end) {
+  const arr = [];
+  const regex = /5/;
+  for (let i = start; i <= end; i++) {
+    if (!regex.test(i)) arr.push(i);
+  }
+  return arr.length;
 }
 
-console.log(minMax([1, 2, 3, 4, 5]));
+// console.log(dontGiveMeFive(1, 9));
+console.log(dontGiveMeFive(4, 17));
