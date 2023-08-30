@@ -1,11 +1,10 @@
 function dontGiveMeFive(start, end) {
-  const arr = [];
-  const regex = /5/;
+  let count = 0;
   for (let i = start; i <= end; i++) {
-    if (!regex.test(i)) arr.push(i);
+    if (!/5/.test(i)) count++;
   }
-  return arr.length;
+  return count;
 }
 
-// console.log(dontGiveMeFive(1, 9));
+console.log(dontGiveMeFive(1, 9));
 console.log(dontGiveMeFive(4, 17));
