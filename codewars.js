@@ -1,10 +1,18 @@
-function dontGiveMeFive(start, end) {
-  let count = 0;
-  for (let i = start; i <= end; i++) {
-    if (!/5/.test(i)) count++;
-  }
-  return count;
+function stray(numbers) {
+  let x = numbers[0];
+  let y = 0;
+  let countX = 0;
+  let countY = 0;
+  numbers.forEach((number) => {
+    if (number === x) {
+      countX++;
+    } else {
+      y = number;
+      countY++;
+    }
+  });
+  return countX > countY ? y : x;
 }
 
-console.log(dontGiveMeFive(1, 9));
-console.log(dontGiveMeFive(4, 17));
+console.log(stray([1, 1, 2]));
+// console.log(stray[(1, 2, 1)]);
