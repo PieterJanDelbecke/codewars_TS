@@ -1,18 +1,9 @@
-function stray(numbers) {
-  let x = numbers[0];
-  let y = 0;
-  let countX = 0;
-  let countY = 0;
-  numbers.forEach((number) => {
-    if (number === x) {
-      countX++;
-    } else {
-      y = number;
-      countY++;
-    }
-  });
-  return countX > countY ? y : x;
+function getDivisorsCnt(n) {
+  let count = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) count++;
+  }
+  return count;
 }
 
-console.log(stray([1, 1, 2]));
-// console.log(stray[(1, 2, 1)]);
+console.log(getDivisorsCnt(54));
