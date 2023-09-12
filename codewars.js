@@ -1,11 +1,11 @@
-function sequenceSum(begin, end, step) {
-  let sum = 0;
-  for (let i = begin; i <= end; i += step) {
-    sum += i;
+function solution(number) {
+  if (number < 0) return 0;
+  let count = 0;
+  for (let i = 1; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) count += i;
   }
-  return sum;
+  return count;
 }
 
-// console.log(sequenceSum(2, 6, 2));
-// console.log(sequenceSum(1, 5, 1));
-console.log(sequenceSum(0, 1, 5));
+console.log(solution(10));
+console.log(solution(-10));
