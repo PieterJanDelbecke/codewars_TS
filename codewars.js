@@ -1,19 +1,17 @@
-function digitalRoot(n) {
-  function toArr(n) {
-    const arr = n
-      .toString()
-      .split("")
-      .map((num) => +num);
-    return arr;
-  }
-
-  while (n.toString().length !== 1) {
-    n = toArr(n).reduce((a, b) => a + b);
-  }
-  return n;
+function spinWords(string) {
+  string = string.split(" ");
+  return string
+    .map((word) => {
+      return word.length >= 5 ? word.split("").reverse().join("") : word;
+    })
+    .join(" ");
 }
 
-console.log(digitalRoot(16));
-console.log(digitalRoot(942));
-console.log(digitalRoot(132189));
-console.log(digitalRoot(493193));
+console.log(spinWords("Hey fellow warriors"));
+// // console.log("This is a test");
+// // console.log("This is another test");
+
+// let word = "hello";
+// console.log(word.split("").reverse().join(""));
+// word = word.split("").reverse().join("");
+// console.log(word.reverse());
