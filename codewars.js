@@ -1,16 +1,22 @@
-function findOdd(A) {
-  for (i = 0; i < A.length; i++) {
-    const letter = A[i];
-    let count = 0;
-    A.forEach((item) => {
-      if (item === letter) count++;
-    });
-    if (count % 2 === 1) return letter;
+function likes(names) {
+  switch (names.length) {
+    case 0:
+      return "no one likes this";
+    case 1:
+      return `${names[0]} likes this`;
+    case 2:
+      return `${names[0]} and ${names[1]} like this`;
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${
+        names.length - 2
+      } others like this`;
   }
 }
 
-console.log(findOdd([7]));
-console.log(findOdd([0]));
-console.log(findOdd([1, 1, 2]));
-console.log(findOdd([0, 1, 0, 1, 0]));
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+console.log(likes([]));
+console.log(likes(["Peter"]));
+console.log(likes(["Jacob", "Alex"]));
+console.log(likes(["Max", "John", "Mark"]));
+console.log(likes(["Alex", "Jacob", "Mark", "Max"]));
