@@ -1,17 +1,11 @@
-function spinWords(string) {
-  string = string.split(" ");
-  return string
-    .map((word) => {
-      return word.length >= 5 ? word.split("").reverse().join("") : word;
-    })
-    .join(" ");
+function arrayDiff(a, b) {
+  for (i = 0; i < b.length; i++) {
+    a = a.filter((item) => item !== b[i]);
+  }
+  return a;
 }
 
-console.log(spinWords("Hey fellow warriors"));
-// // console.log("This is a test");
-// // console.log("This is another test");
-
-// let word = "hello";
-// console.log(word.split("").reverse().join(""));
-// word = word.split("").reverse().join("");
-// console.log(word.reverse());
+console.log(arrayDiff([1, 2], [1]));
+console.log(arrayDiff([1, 2, 2], [1]));
+console.log(arrayDiff([1, 2, 2], []));
+console.log(arrayDiff([1, 2, 3], [1, 2]));
