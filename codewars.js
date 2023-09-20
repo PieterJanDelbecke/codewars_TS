@@ -1,8 +1,18 @@
-function findOutlier(integers) {
-  const even = integers.filter((num) => num % 2 === 0);
-  const odd = integers.filter((num) => num % 2 !== 0);
-  return even.length === 1 ? even[0] : odd[0];
+function duplicateCount(text) {
+  let count = 0;
+  text = text.toLowerCase().split("");
+  let myText = text;
+  console.log(myText);
+  text.forEach((item) => {
+    const filtered = myText.filter((char) => char === item);
+    if (filtered.length > 1) {
+      count++;
+      myText = myText.filter((n) => n !== item);
+    }
+  });
+  return count;
 }
 
-console.log(findOutlier([0, 1, 2]));
-console.log(findOutlier([1, 2, 3]));
+// console.log(duplicateCount(""));
+// console.log(duplicateCount("abcde"));
+console.log(duplicateCount("aabbcde"));
