@@ -1,12 +1,15 @@
-function solution(number) {
-  if (number < 0) return 0;
-  let result = 0;
-  for (let i = 0; i < number; i++) {
-    if (i % 3 === 0 || i % 5 === 0) {
-      result += i;
-    }
-  }
-  return result;
+function likes(names) {
+  const length = names.length;
+  if (length === 0) return "no one likes this";
+  else if (length === 1) return `${names[0]} likes this`;
+  else if (length === 2) return `${names[0]} and ${names[1]} like this`;
+  else if (length === 3)
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+  else return `${names[0]}, ${names[1]} and ${length - 2} others like this`;
 }
 
-console.log(solution(10));
+console.log(likes([]));
+console.log(likes(["Peter"]));
+console.log(likes(["Jacob", "Alex"]));
+console.log(likes(["Max", "John", "Mark"]));
+console.log(likes(["Alex", "Jacob", "Mark", "Max"]));
