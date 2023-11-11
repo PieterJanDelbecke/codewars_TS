@@ -1,18 +1,12 @@
-function duplicateCount(text) {
-  let count = 0;
-  text = text.toLowerCase().split("");
-  let myText = text;
-  console.log(myText);
-  text.forEach((item) => {
-    const filtered = myText.filter((char) => char === item);
-    if (filtered.length > 1) {
-      count++;
-      myText = myText.filter((n) => n !== item);
+function solution(number) {
+  if (number < 0) return 0;
+  let result = 0;
+  for (let i = 0; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      result += i;
     }
-  });
-  return count;
+  }
+  return result;
 }
 
-// console.log(duplicateCount(""));
-// console.log(duplicateCount("abcde"));
-console.log(duplicateCount("aabbcde"));
+console.log(solution(10));
