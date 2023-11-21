@@ -1,14 +1,27 @@
-class Rectangle {
-	constructor(width, height) {
-		this.width = width;
-		this.height = height;
+class Animal {
+	constructor(name) {
+		this.name = name;
 	}
 
-	area() {
-		return this.width * this.height;
+	speak() {
+		return `My name is ${this.name}`;
 	}
 }
 
-const rectangle = new Rectangle(5, 10);
+let charlie = new Animal("Charlie");
 
-console.log("### rectangle", rectangle.area());
+console.log(charlie.speak());
+
+class Dog extends Animal {
+	constructor(name, breed) {
+		super(name);
+		this.breed = breed;
+	}
+
+	speak() {
+		return `Woof! ${super.speak()}, I'm a ${this.breed} `;
+	}
+}
+
+let spooky = new Dog("Spooky", "Border Collie");
+console.log(spooky.speak());
