@@ -1,27 +1,23 @@
-class Animal {
-	constructor(name) {
-		this.name = name;
-	}
+const student = {
+	name: "John",
+	course: "none",
+};
 
-	speak() {
-		return `My name is ${this.name}`;
-	}
-}
+const genTechStudent = {
+	course: "GenTech",
+	start: "October",
+};
 
-let charlie = new Animal("Charlie");
+const caStudent = {
+	languages: ["Ruby", "Javascript"],
+	speak: () => {
+		console.log("I can do it");
+	},
+};
 
-console.log(charlie.speak());
-
-class Dog extends Animal {
-	constructor(name, breed) {
-		super(name);
-		this.breed = breed;
-	}
-
-	speak() {
-		return `Woof! ${super.speak()}, I'm a ${this.breed} `;
-	}
-}
-
-let spooky = new Dog("Spooky", "Border Collie");
-console.log(spooky.speak());
+let John = Object.assign(student, genTechStudent, caStudent);
+// console.log(John);
+console.log(John.speak());
+console.log(John.start);
+// console.log(John);
+// console.log(John);
